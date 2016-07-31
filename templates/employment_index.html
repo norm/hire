@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+  <section id='currently-on-norm' class='employment'>
+    <h2>Current working</h2>
+    <ul>
+      {% for job in current_employment %}
+        <li>
+          <h3>
+            <a href='{{job.url}}'>{{job.role}}, {{job.company}}</a>
+            (since {{job.start.strftime('%B %Y')}})
+          </h3>
+          {% if job.summary %}
+            {{job.summary}}
+          {% else %}
+            {{job.body}}
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section id='previously-on-norm' class='employment'>
+    <h2>Previous employment</h2>
+    <ul>
+      {% for job in previous_employment %}
+        <li>
+          <h3>
+            <a href='{{job.url}}'>{{job.role}}, {{job.company}}</a>
+            ({{job.start.strftime('%B %Y')}}–{{job.end.strftime('%B %Y')}})
+          </h3>
+          {% if job.summary %}
+            {{job.summary}}
+          {% else %}
+            {{job.body}}
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+{% endblock %}

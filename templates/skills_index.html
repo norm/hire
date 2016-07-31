@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block body_class %}skills{% endblock %}
+
+{% block body %}
+
+  <p>I am a "full stack" developer, good at working with...</p>
+
+  <section id='skills'>
+    <h2>People</h2>
+    <ul>
+      {% for skill in skills.people %}
+        <li><a href='{{skill.url}}'>{{skill.title}}</a></li>
+      {% endfor %}
+    </ul>
+
+    <h2>Front end code</h2>
+    <ul>
+      {% for skill in skills.frontend %}
+        <li><a href='{{skill.url}}'>{{skill.title}}</a></li>
+      {% endfor %}
+    </ul>
+
+    <h2>Back end code</h2>
+    <ul>
+      {% for skill in skills.backend %}
+        <li><a href='{{skill.url}}'>{{skill.title}}</a></li>
+      {% endfor %}
+    </ul>
+
+    <h2>Servers</h2>
+    <ul>
+      {% for skill in skills.servers %}
+        <li><a href='{{skill.url}}'>{{skill.title}}</a></li>
+      {% endfor %}
+    </ul>
+  </section>
+  
+{% endblock %}

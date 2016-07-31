@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+{% block body_class %}summary printable{% endblock %}
+
+{% block body %}
+
+  <section id='printable'>
+    <p id='pdf'>
+      You can print this page, or
+      <a href='/mark-norman-francis.pdf'>download it in PDF format</a>.
+    </p>
+    <p id='canonical'>
+      The canonical version of my CV/résumé can be found at
+      <a href='http://hire.marknormanfrancis.com/'>hire.marknormanfrancis.com</a>
+      and contains more content than this version, which is dated July 2016.
+    </p>
+  </section>
+
+  <section id='skills'>
+    <h2>I am a "full stack" developer, good at working with...</h2>
+
+    <h3>People</h3>
+    <ul>
+      {% for skill in skills.people %}
+        <li>{{skill.summary}}</li>
+      {% endfor %}
+    </ul>
+
+    <h3>Front end code</h3>
+    <ul>
+      {% for skill in skills.frontend %}
+        <li>{{skill.summary}}</li>
+      {% endfor %}
+    </ul>
+
+    <h3>Back end code</h3>
+    <ul>
+      {% for skill in skills.backend %}
+        <li>{{skill.summary}}</li>
+      {% endfor %}
+    </ul>
+
+    <h3>Servers</h3>
+    <ul>
+      {% for skill in skills.servers %}
+        <li>{{skill.summary}}</li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section id='currently-on-norm' class='employment'>
+    <h2>Current working</h2>
+    <ul>
+      {% for job in current_employment %}
+        <li>
+          <h3>{{job.role}}, {{job.company}} (since {{job.start.strftime('%B %Y')}})</h3>
+          {% if job.summary %}
+            {{job.summary}}
+          {% else %}
+            {{job.body}}
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section id='previously-on-norm' class='employment'>
+    <h2>Previous employment</h2>
+    <ul>
+      {% for job in previous_employment %}
+        <li>
+          <h3>{{job.role}}, {{job.company}} ({{job.start.strftime('%B %Y')}}–{{job.end.strftime('%B %Y')}})</h3>
+          {% if job.summary %}
+            {{job.summary}}
+          {% else %}
+            {{job.body}}
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section id='print-footer'>
+    <a href='http://hire.marknormanfrancis.com/'>hire.marknormanfrancis.com</a>
+    — July 2016.
+  </section>
+
+{% endblock %}

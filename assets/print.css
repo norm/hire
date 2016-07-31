@@ -1,0 +1,59 @@
+html {
+    background: #fff;
+}
+body {
+    font-size: 14px;
+    color: black;
+}
+a {
+    color: black;
+}
+
+header:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* over-ride to public url */
+#linkedin:after {
+    content: ': http://www.linkedin.com/in/marknormanfrancis';
+}
+
+header nav {
+    display: none;
+}
+
+#pdf {
+    display: none;
+}
+#canonical {
+    display: block;
+}
+#canonical a {
+    display: inline-block;
+    background: #eee;
+    color: #000;
+    font-weight: bold;
+    padding: 2px 5px;
+}
+
+#previously-on-norm {
+    page-break-before: always;
+}
+#print-footer {
+    display: block;
+    position: fixed;
+    bottom: 0;
+}
+#print-footer a {
+    display: inline-block;
+    background: #eee;
+    color: #000;
+    font-weight: bold;
+    padding: 2px 5px;
+}
+
+#currently-on-norm {
+    margin-top: 4em;
+}

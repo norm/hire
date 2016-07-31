@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block body_class %}page{% endblock %}
+
+{% block breadcrumbs_list %}
+  <li><a href='/'>Mark Norman Francis</a></li>
+  <li><a href='/employment/'>Employment</a></li>
+  <li><em>{{company}}</em></li>
+{% endblock %}
+
+{% block body %}
+
+  <h1>
+    {{role}}, {{company}} ({% if not end %}since {% endif %}{{start.strftime('%B %Y')}}{% if end %}&ndash;{{end.strftime('%B %Y')}}{% endif %})
+  </h1>
+  <div class='copy'>
+    {{body}}
+  </div>
+
+{% endblock %}
+

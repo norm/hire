@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+
+{% block body_class %}summary{% endblock %}
+
+{% block body %}
+
+  <section id='sup'>
+    {{introduction.body}}
+  </section>
+
+  <section id='skills'>
+    <h2>I am a "full stack" developer, good at working with...</h2>
+
+    <h3>People</h3>
+    <ul>
+      {% for skill in skills.people %}
+        <li>{{skill.summary}}</li>
+      {% endfor %}
+    </ul>
+
+    <h3>Front end code</h3>
+    <ul>
+      {% for skill in skills.frontend %}
+        <li>{{skill.summary}}</li>
+      {% endfor %}
+    </ul>
+
+    <h3>Back end code</h3>
+    <ul>
+      {% for skill in skills.backend %}
+        <li>{{skill.summary}}</li>
+      {% endfor %}
+    </ul>
+
+    <h3>Servers</h3>
+    <ul>
+      {% for skill in skills.servers %}
+        <li>{{skill.summary}}</li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  {#
+  <section id='currently-on-norm' class='employment'>
+    <h2>Current working</h2>
+    <ul>
+      {% for job in current_employment %}
+        <li>
+          <h3>
+            {{job.role}}, {{job.company}}
+            (since {{job.start.strftime('%Y')}})
+          </h3>
+          {% if job.summary %}
+            {{job.summary}}
+          {% else %}
+            {{job.body}}
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section id='previously-on-norm' class='employment'>
+    <h2>Recent employment</h2>
+    <ul>
+      {% for job in previous_employment %}
+        <li class='{% if job.old %}old{% endif %}'>
+          <h3>
+            {{job.role}}, {{job.company}}
+            ({{job.start.strftime('%B %Y')}}&ndash;{{job.end.strftime('%B %Y')}})
+          </h3>
+          {% if job.summary %}
+            {{job.summary}}
+          {% else %}
+            {{job.body}}
+          {% endif %}
+        </li>
+      {% endfor %}
+      <li class='more'>
+        See <a href='/employment/'>Previous Employment</a> for older jobs.
+      </li>
+    </ul>
+  </section>
+
+  <section id='dont-just-take-my-word-for-it'>
+    <h2>A selection of what others have said about me</h2>
+    <ul>
+      {% for recommendation in recommendations %}
+        <li>
+          <figure>
+            {{recommendation.body}}
+            <figcaption>
+              <cite>{{recommendation.person}}</cite>, then {{recommendation.job}}.
+            </figcaption>
+          </figure>
+      {% endfor %}
+      
+    </ul>
+  </section>
+  #}
+
+  <section id='values'>
+    <h2>My values</h2>
+    {{values.body}}
+  </section>
+
+{% endblock %}

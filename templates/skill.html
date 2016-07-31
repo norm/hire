@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block body_class %}page skill{% endblock %}
+
+{% block breadcrumbs_list %}
+  <li><a href='/'>Mark Norman Francis</a></li>
+  <li><a href='/skills/'>Skills</a></li>
+  <li>{{title}}</li>
+{% endblock %}
+
+{% block body %}
+
+  <h1>{{title}}</h1>
+  <div class='copy'>
+    {{body}}
+  </div>
+
+{% endblock %}

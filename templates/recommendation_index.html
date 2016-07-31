@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+  <section id='recommendations'>
+    <h2>Recommendations</h2>
+    <ul>
+      {% for recommendation in pages %}
+        <h3>{{recommendation.title}}</h3>
+        {{recommendation.body}}
+      {% endfor %}
+    </ul>
+  </section>
+
+{% endblock %}
