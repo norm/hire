@@ -2,7 +2,7 @@
 class = 'backend'
 title = 'HTTP and APIs'
 type = 'skill'
-summary = "am experienced with <a href='/skills/back-end/http'>HTTP</a> including RESTful APIs and URI design"
+summary = "am experienced with <a href='/skills/http'>HTTP</a> including RESTful APIs and URI design"
 position = 3
 ---
 

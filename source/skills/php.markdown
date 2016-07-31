@@ -2,7 +2,7 @@
 class = 'backend'
 title = 'PHP'
 type = 'skill'
-summary = "and previously used <a href='/skills/back-end/php'>PHP</a> between 2004-2010"
+summary = "and previously used <a href='/skills/php'>PHP</a> between 2004-2010"
 position = 5
 ---
 

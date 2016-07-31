@@ -2,7 +2,7 @@
 class = 'backend'
 title = 'Data storage'
 type = 'skill'
-summary = "have a wide range of experience of <a href='/skills/back-end/storage'>data storage technologies</a>"
+summary = "have a wide range of experience of <a href='/skills/storage'>data storage technologies</a>"
 position = 2
 ---
 

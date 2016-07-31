@@ -2,7 +2,7 @@
 class = 'backend'
 title = 'Perl'
 type = 'skill'
-summary = "I am a (reformed) two decade long <a href='/skills/back-end/perl'>perl programmer</a>"
+summary = "I am a (reformed) two decade long <a href='/skills/perl'>perl programmer</a>"
 position = 4
 ---
 
