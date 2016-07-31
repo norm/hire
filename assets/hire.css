@@ -102,7 +102,7 @@ body {
 }
 
 body {
-    font-family: 'Lato', Helmet, Freesans, sans-serif;
+    font-family: 'Lato', 'Tahoma', 'Helmet', 'Freesans', sans-serif;
     line-height: 1.4;
 }
 
@@ -145,7 +145,8 @@ section h1 {
 }
 
 header h1 {
-    font-family: 'Vollkorn', serif;
+    font-family: 'Vollkorn', 'Hoefler Text', 'Georgia', serif;
+    font-weight: 700;
     font-size: 3em;
     line-height: 1.05;
     margin: 0;
